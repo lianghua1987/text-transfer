@@ -1,25 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
+import {useState} from "react";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [value, setValue] = useState('');
+
+    const onChange = e => {
+        setValue(e.target.value);
+    }
+
+    return (
+        <div className="App">
+            <header className="App-header">
+                <label>Windows -> Mac Message Connector</label><br/>
+                <div>
+                    <textarea rows="5" onChange={onChange}></textarea>
+                    <p className="info">
+                        {value}
+                    </p>
+                </div>
+
+            </header>
+        </div>
+    );
 }
 
 export default App;
