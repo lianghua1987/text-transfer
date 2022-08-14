@@ -18,10 +18,14 @@
     font-size: calc(8px + 1.5vmin);
 }
 
+ul {
+    text-align: left;
+}
+
 button {
     margin: 0 8px;
 }
 
 textarea {
-    width: 100%;
+    width: 40%;
 }
